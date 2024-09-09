@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve", // Updated to use the new JSX transform
+    "module": "commonjs",
+    "target": "ES2020",
+    "outDir": "./dist", // Outputs compiled files to 'dist' directory at project root
+    "rootDir": "./src", // Source files are located in 'src'
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": false, // Set to false to generate output files
+    "incremental": true,
+    "isolatedModules": true,
+    "jsxImportSource": "react" // Add this line to ensure the correct JSX import source
+  },
+  "include": [
+    "src/**/*" // Include all files in the 'src' directory
+  ],
+  "exclude": [
+    "node_modules", // Exclude the 'node_modules' directory
+    "dist" // Exclude the 'dist' directory from the compilation process
+  ]
+}

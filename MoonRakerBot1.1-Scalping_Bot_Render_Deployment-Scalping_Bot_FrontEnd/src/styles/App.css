@@ -1,0 +1,341 @@
+/* App.css */
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #8516c1, black); /* Purple to black gradient */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  padding: 20px; /* Added padding for better spacing on smaller screens */
+  position: relative; /* For absolute positioning of buttons */
+}
+
+.App-logo {
+  width: 100%;
+  max-width: 444px; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.App-header {
+  margin-top: 20px;
+}
+
+.env-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Ensure the form elements stretch to the container's width */
+  width: 100%;
+  max-width: 800px; /* Adjust max width for better mobile experience */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.env-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.env-input label {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.env-input input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(211, 239, 184, 0.844);
+  font-size: 1em;
+  outline: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.env-input input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Allows buttons to wrap if there's not enough space */
+}
+
+.update-button,
+.trading-toggle {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(229, 194, 229, 0.1);
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-button:hover,
+.trading-toggle:hover {
+  background-color: rgba(215, 46, 204, 0.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allows buttons to wrap if there's not enough space */
+}
+
+.trading-button,
+.wallet-manager-toggle,
+.chart-toggle,
+.console-toggle,
+.clear-cookies-button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(247, 244, 244);
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.trading-button:hover,
+.wallet-manager-toggle:hover,
+.chart-toggle:hover,
+.console-toggle:hover,
+.clear-cookies-button:hover {
+  background-color: rgba(220, 19, 238, 0.2);
+}
+
+.trading-toggle {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(247, 244, 244);
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.trading-toggle:hover {
+  background-color: rgba(220, 19, 238, 0.2);
+}
+
+.trading-status-light {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+}
+
+.green-light {
+  background-color: green;
+}
+
+.red-light {
+  background-color: red;
+}
+
+.wallet-manager {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+  width: 100%;
+  max-width: 800px; /* Adjust max width for better mobile experience */
+}
+
+.wallet-manager h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #d3efb8;
+}
+
+.wallet-manager .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.wallet-manager .form-group input,
+.wallet-manager .form-group button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(211, 239, 184, 0.844);
+  font-size: 1em;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.wallet-manager .form-group input:focus,
+.wallet-manager .form-group button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.wallet-manager .balance {
+  margin-top: 15px;
+  font-weight: bold;
+  color: rgba(211, 239, 184, 0.844);
+}
+
+.console {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+  width: 100%;
+  max-width: 800px; /* Adjust max width for better mobile experience */
+}
+
+.console h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #d3efb8;
+}
+
+.console button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(229, 194, 229, 0.1);
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.console button:hover {
+  background-color: rgba(215, 46, 204, 0.2);
+}
+
+.log-feed {
+  width: 100%;
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+}
+
+.log-feed p {
+  text-align: left;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: rgba(211, 239, 184, 0.844);
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.link {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .env-form,
+  .wallet-manager,
+  .console {
+    padding: 10px;
+  }
+
+  .env-input,
+  .button-group {
+    width: 100%;
+  }
+  
+  .env-input label,
+  .env-input input,
+  .button-group button {
+    font-size: 14px;
+  }
+}
+
+/* Top left and top right button styles */
+.header-buttons {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.left-button,
+.right-button {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Match button color with theme */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  font-size: 1.2em; /* Adjust font size */
+  cursor: pointer; /* Show pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.left-button:hover,
+.right-button:hover {
+  background-color: rgba(220, 19, 238, 0.2); /* Darker shade on hover */
+}
+
+.left-button:focus,
+.right-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a slight shadow for focus state */
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Match button color with theme */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  font-size: 1em; /* Adjust font size */
+  cursor: pointer; /* Show pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.back-button:hover {
+  background-color: rgba(220, 19, 238, 0.2); /* Darker shade on hover */
+}
